@@ -8,7 +8,7 @@ With django-storages: add
 AWS_DEFAULT_ACL = None
 
 
-BUCKET POLICY:
+## BUCKET POLICY: ##
 
 {
     "Version": "2012-10-17",
@@ -34,3 +34,39 @@ BUCKET POLICY:
         }
     ]
 }
+
+## CORS Policy: ##
+
+[
+    {
+        "AllowedHeaders": [
+            "*"
+        ],
+        "AllowedMethods": [
+            "PUT",
+            "POST",
+            "DELETE"
+        ],
+        "AllowedOrigins": [
+            "https://pguyard-blog.herokuapp.com"
+        ],
+        "ExposeHeaders": []
+    },
+    {
+        "AllowedHeaders": [],
+        "AllowedMethods": [
+            "GET"
+        ],
+        "AllowedOrigins": [
+            "*"
+        ],
+        "ExposeHeaders": []
+    }
+]
+
+
+https://stackoverflow.com/questions/63392426/how-to-use-tailwindcss-with-django
+
+https://geekflare.com/nodejs-installation-guide/
+
+https://github.com/bradlc/tailwindcss-fluid

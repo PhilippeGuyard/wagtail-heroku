@@ -2,3 +2,4 @@
 .vscode
 .env
 staticfiles/
+node_modules/
