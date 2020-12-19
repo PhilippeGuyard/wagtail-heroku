@@ -168,6 +168,8 @@ if USE_S3:
     AWS_DEFAULT_ACL = None
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{AWS_LOCATION}/'
     STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+    DEFAULT_FILE_STORAGE = 'storage_backends.MediaStorage'
+    AWS_S3_REGION_NAME = 'eu-west-2'
 else:
     STATIC_URL = '/staticfiles/'
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
@@ -177,15 +179,12 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 MEDIA_URL = '/mediafiles/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 
-
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'personal_blog/static'),)
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/mediafiles/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 
-DEFAULT_FILE_STORAGE = 'storage_backends.MediaStorage'
+
 
 # IMPORTANT IF USING DJANGO-STORAGES: USE staticfiles=False
 django_heroku.settings(locals(), staticfiles=False)
