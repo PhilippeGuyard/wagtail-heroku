@@ -1,0 +1,12 @@
+SECRET_KEY = 'yoursecretkey'
+
+DATABASE_NAME = 'local database name'
+USER='your username'
+PASSWORD='your password@'
+
+AWS_SECRET_ACCESS_KEY = 'somerandomstring'
+AWS_ACCESS_KEY_ID = 'anotherrandomstring'
+
+AWS_STORAGE_BUCKET_NAME = 'your bucket name'
+
+USE_S3 = 'FALSE'
