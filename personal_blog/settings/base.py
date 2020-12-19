@@ -185,7 +185,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/mediafiles/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 
-DEFAULT_FILE_STORAGE = 'personal_blog.storage_backends.MediaStorage'
+DEFAULT_FILE_STORAGE = 'storage_backends.MediaStorage'
 
 # IMPORTANT IF USING DJANGO-STORAGES: USE staticfiles=False
 django_heroku.settings(locals(), staticfiles=False)
